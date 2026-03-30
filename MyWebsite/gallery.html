@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventures in Fire Island - Gallery</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h2>🏖️ Fire Island</h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <header class="page-header">
+            <h1>📸 Gallery</h1>
+            <p>Capturing the magic of Fire Island through photography</p>
+        </header>
+
+        <div class="container">
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">All Photos</button>
+                <button class="filter-btn" data-filter="sunset">Sunsets</button>
+                <button class="filter-btn" data-filter="wildlife">Wildlife</button>
+                <button class="filter-btn" data-filter="beach">Beach Scenes</button>
+            </div>
+
+            <div class="gallery-grid-full">
+                <div class="gallery-item" data-category="sunset">
+                    <img src="https://picsum.photos/id/104/400/300" alt="Spectacular sunset over the ocean">
+                    <div class="gallery-caption">
+                        <h3>Golden Hour Magic</h3>
+                        <p>The sun setting over the Atlantic creates a breathtaking display of colors.</p>
+                        <span class="category">Sunset</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="wildlife">
+                    <img src="https://picsum.photos/id/96/400/300" alt="Deer in natural habitat">
+                    <div class="gallery-caption">
+                        <h3>Deer on the Dunes</h3>
+                        <p>Wild deer roam freely throughout the island's natural areas.</p>
+                        <span class="category">Wildlife</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="beach">
+                    <img src="https://picsum.photos/id/15/400/300" alt="Pristine beach with waves">
+                    <div class="gallery-caption">
+                        <h3>Pristine Shores</h3>
+                        <p>Clean, untouched beaches stretch for miles along the coast.</p>
+                        <span class="category">Beach Scenes</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="wildlife">
+                    <img src="https://picsum.photos/id/128/400/300" alt="Birds flying over water">
+                    <div class="gallery-caption">
+                        <h3>Coastal Birds</h3>
+                        <p>Hundreds of bird species call Fire Island home.</p>
+                        <span class="category">Wildlife</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="sunset">
+                    <img src="https://picsum.photos/id/39/400/300" alt="Pink and purple sunset">
+                    <div class="gallery-caption">
+                        <h3>Pink Skies</h3>
+                        <p>Sunset transforms the sky into a watercolor masterpiece.</p>
+                        <span class="category">Sunset</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="beach">
+                    <img src="https://picsum.photos/id/116/400/300" alt="Beach with lighthouse">
+                    <div class="gallery-caption">
+                        <h3>Fire Island Lighthouse</h3>
+                        <p>The historic lighthouse stands guard over the island.</p>
+                        <span class="category">Beach Scenes</span>
+                    </div>
+                </div>
+            </div>
+
+            <section class="video-section">
+                <h2 class="section-title">Experience Fire Island</h2>
+                <div class="video-grid">
+                    <div class="video-card">
+                        <div class="video-placeholder">🎥</div>
+                        <h3>Sunset Time-lapse</h3>
+                        <p>Watch the sky transform in this beautiful time-lapse video.</p>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-placeholder">🎥</div>
+                        <h3>Wildlife Documentary</h3>
+                        <p>See the diverse wildlife that inhabits Fire Island.</p>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-placeholder">🎥</div>
+                        <h3>Beach Walk Tour</h3>
+                        <p>Take a virtual walk along the pristine beaches.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Adventures in Fire Island</h3>
+                <p>Discovering nature's paradise one step at a time.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#">📷 Instagram</a>
+                    <a href="#">🐦 Twitter</a>
+                    <a href="#">📘 Facebook</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Adventures in Fire Island | Nature is calling, and you must go</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple filter functionality for gallery
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const filter = button.dataset.filter;
+                
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                
+                galleryItems.forEach(item => {
+                    if (filter === 'all' || item.dataset.category === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

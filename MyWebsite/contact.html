@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventures in Fire Island - Contact</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h2>🏖️ Fire Island</h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <header class="page-header">
+            <h1>📞 Contact Us</h1>
+            <p>We'd love to hear about your Fire Island adventures!</p>
+        </header>
+
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h2>Get in Touch</h2>
+                    <div class="info-card">
+                        <div class="info-icon">📍</div>
+                        <div>
+                            <h3>Visit Us</h3>
+                            <p>Fire Island National Seashore<br>120 Laurel Street<br>Patchogue, NY 11772</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">📧</div>
+                        <div>
+                            <h3>Email Us</h3>
+                            <p>info@fireislandadventures.com</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">📞</div>
+                        <div>
+                            <h3>Call Us</h3>
+                            <p>(631) 555-0123</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">🕒</div>
+                        <div>
+                            <h3>Hours</h3>
+                            <p>Monday - Friday: 9am - 5pm<br>Saturday - Sunday: 10am - 4pm</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h2>Send Us a Message</h2>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message →</button>
+                    </form>
+                    <div id="formMessage" class="form-message"></div>
+                </div>
+            </div>
+
+            <section class="map-section">
+                <h2 class="section-title">Find Us</h2>
+                <div class="map-placeholder">
+                    <div class="map-content">
+                        <p>📍 Fire Island National Seashore</p>
+                        <p>Located off the southern shore of Long Island, New York</p>
+                        <p class="map-note">Take the ferry from Bay Shore, Sayville, or Patchogue</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="faq-section">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h3>How do I get to Fire Island?</h3>
+                        <p>Fire Island is accessible by ferry from several Long Island towns including Bay Shore, Sayville, and Patchogue. There are no bridges connecting to the island.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>When is the best time to visit?</h3>
+                        <p>The best time to visit is between May and September when the weather is warm and all facilities are open. Summer offers the best beach weather.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Are there accommodations on the island?</h3>
+                        <p>Yes, there are hotels, bed & breakfasts, and rental homes available in various communities throughout the island.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Is Fire Island pet-friendly?</h3>
+                        <p>Pets are allowed on beaches and trails but must be leashed. Some areas have seasonal restrictions to protect wildlife.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Adventures in Fire Island</h3>
+                <p>Discovering nature's paradise one step at a time.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#">📷 Instagram</a>
+                    <a href="#">🐦 Twitter</a>
+                    <a href="#">📘 Facebook</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Adventures in Fire Island | Nature is calling, and you must go</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const messageDiv = document.getElementById('formMessage');
+            messageDiv.innerHTML = '✅ Thank you for your message! We\'ll get back to you soon.';
+            messageDiv.style.color = '#4CAF50';
+            messageDiv.style.padding = '10px';
+            messageDiv.style.backgroundColor = '#e8f5e9';
+            messageDiv.style.borderRadius = '5px';
+            this.reset();
+            
+            setTimeout(() => {
+                messageDiv.innerHTML = '';
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
