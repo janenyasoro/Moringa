@@ -4,10 +4,10 @@ import Todo from './components/ToDo'  // Note: Make sure filename matches (Todo.
 
 function App() {
   return(
-    <div className='App'>
-      <Todo />  {/* ✅ ADD THIS - now your Todo component will render */}
-    </div>
-  )
+    <div className='min-h-screen bg-gray-100 flex items-center justify-center'>
+      <Todo /> 
+      </div> 
+  );
 }
 
 export default App;

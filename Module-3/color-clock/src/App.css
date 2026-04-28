@@ -1,0 +1,115 @@
+/* Import Google Font for better typography */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Poppins:wght@300;400;600&display=swap');
+
+/* Container styling */
+.clock-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  font-family: 'Poppins', 'Orbitron', sans-serif;
+  padding: 20px;
+}
+
+/* Clock card styling */
+.clock-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 30px;
+  padding: 50px 60px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3),
+              inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.clock-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.4);
+}
+
+/* Clock title styling */
+.clock-title {
+  font-family: 'Orbitron', monospace;
+  font-size: 1.5rem;
+  letter-spacing: 3px;
+  color: #e94560;  /* Pink/red accent color (not black/white) */
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+/* Time display styling */
+.clock-time {
+  font-family: 'Orbitron', monospace;
+  font-size: 4rem;
+  font-weight: 900;
+  letter-spacing: 5px;
+  color: #2c3e50;
+  margin: 20px 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Date display styling */
+.clock-date {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #4a5568;
+  margin: 15px 0;
+  letter-spacing: 1px;
+}
+
+/* Greeting styling - optional accent color */
+.clock-greeting {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #e94560;  /* Using the accent color again */
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 2px solid #e94560;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 600px) {
+  .clock-card {
+    padding: 30px 35px;
+  }
+  
+  .clock-time {
+    font-size: 2rem;
+    letter-spacing: 3px;
+  }
+  
+  .clock-date {
+    font-size: 1rem;
+  }
+  
+  .clock-title {
+    font-size: 1rem;
+  }
+}
+
+/* Optional: Glowing animation for the time */
+@keyframes subtleGlow {
+  0% {
+    text-shadow: 0 0 5px rgba(102, 126, 234, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 15px rgba(102, 126, 234, 0.6);
+  }
+  100% {
+    text-shadow: 0 0 5px rgba(102, 126, 234, 0.3);
+  }
+}
+
+.clock-time {
+  animation: subtleGlow 3s ease-in-out infinite;
+}
